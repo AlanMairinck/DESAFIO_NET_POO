@@ -1,17 +1,15 @@
-using System.Threading;
-
 namespace DesafioPOO.Models
 {
     // TODO: Herdar da classe "Smartphone"
-    public class Nokia : Smartphone
+    public class Apple : Smartphone
     {
-        public Nokia(string numero, string imei,string marca, string modelo, int memoria, int armazenamento) : base(numero, imei,marca, modelo, memoria, armazenamento)
+        public Apple(string numero, string imei,string marca, string modelo, int memoria, int armazenamento) : base(numero, imei,marca, modelo, memoria, armazenamento)
         {}
         // TODO: Sobrescrever o método "InstalarAplicativo"
         public override void InstalarAplicativo(string nomeApp)
         {
             if(string.IsNullOrWhiteSpace(nomeApp))
-                throw new ArgumentNullException(nomeApp, "O nome do aplicativo deve ser informado.");
+                throw new ArgumentNullException("O nome do aplicativo deve ser informado.");
             else
             {
                 Console.WriteLine($"Instalando {nomeApp}...");
